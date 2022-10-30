@@ -1,0 +1,18 @@
+class Solution {
+public:
+    bool checkDistances(string s, vector<int>& distance) {
+
+    unordered_map<char,int>st;
+        for(int i=0; i<s.size(); i++)
+        {
+            if(st.find(s[i])!=st.end()){
+                st[s[i]]=i-st[s[i]]-1;
+                    
+                    if(st[s[i]]!=distance[s[i]-'a']) return false;
+            }
+            else(st[s[i]])=i;
+        }
+        return true;
+}
+        
+};
